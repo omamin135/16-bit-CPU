@@ -4,7 +4,7 @@
 
 comprised of fast master clock (MCLK) + slower auxiliary clock (ACLK)
 
-FC used by cpu
+MCLK used by cpu
 
 Mux into timer to select between main and slow clock
 
@@ -16,7 +16,7 @@ Registers:
 TxCTR   : 8b: Control Register 
 TxCR    :16b: Compare Register
 
-TxCTR = |     1b     |     1b     |                2b                   |     1b     |     1b     |     1b     |
+TxCTR = |     1b     |     1b     |                3b                   |     1b     |     1b     |     1b     |
         | CLK select |Timer Enable|              Divider                |    Clear   |  Intr Enb  |    Intr    |
 
 CLK select: Clock source selection
@@ -52,12 +52,5 @@ Interupt Code: 00
 
 Interupts triggered on high state
 ![alt text](image.png)
-
-
-# I/O
-
-1) Keyboard Input: PS/2 protocol
-2) Display Out
-
 
 
